@@ -1,5 +1,5 @@
 # Ex03 To-Do List using JavaScript
-## Date:
+## Date:06/04/2025
 
 ## AIM
 To create a To-do Application with all features using JavaScript.
@@ -36,9 +36,143 @@ Deploy the website.
 Upload to GitHub Pages for free hosting.
 
 ## PROGRAM
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: pink; 
+            text-align: center;
+        }
+        header, footer {
+            background-color: lightblue; /* Changed to light blue */
+            color: white;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
+          
+        }
+        .todo-container {
+            max-width: 400px;
+            background: white;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #6da6df;
+        }
+        .todo-input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #6da6df;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .todo-list {
+            list-style: none;
+            padding: 0;
+        }
+        .todo-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #6da6df;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .todo-item.completed span {
+            text-decoration: line-through;
+            color: rgb(122, 20, 121);
+        }
+        .todo-buttons button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .complete-btn {
+            background-color: #6da6df; 
+            color: white;
+        }
+        .delete-btn {
+            background-color: #6da6df;
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+```
+```
+    <header>Todo Application</header>
+    <div class="todo-container">
+        <h2>To-Do List ✅</h2>
+        <input type="text" id="todo-input" class="todo-input" placeholder="Add a new task">
+        <ul id="todo-list" class="todo-list"></ul>
+    </div>
+    <footer>&copy; 2025 Vaishnavi S.A (212223220119) | All rights reserved.</footer>
+    <script>
+        const todoInput = document.getElementById('todo-input');
+        const todoList = document.getElementById('todo-list');
 
+        function addTodo() {
+            const task = todoInput.value.trim();
+            if (task === '') return;
+
+            const li = document.createElement('li');
+            li.className = 'todo-item';
+
+            const span = document.createElement('span');
+            span.textContent = task;
+
+            const buttonsDiv = document.createElement('div');
+            buttonsDiv.className = 'todo-buttons';
+
+            const completeBtn = document.createElement('button');
+            completeBtn.textContent = 'Complete';
+            completeBtn.className = 'complete-btn';
+            completeBtn.onclick = () => {
+                li.classList.toggle('completed');
+            };
+
+            const deleteBtn = document.createElement('button');
+            deleteBtn.textContent = 'Delete';
+            deleteBtn.className = 'delete-btn';
+            deleteBtn.onclick = () => {
+                todoList.removeChild(li);
+            };
+
+            buttonsDiv.appendChild(completeBtn);
+            buttonsDiv.appendChild(deleteBtn);
+
+            li.appendChild(span);
+            li.appendChild(buttonsDiv);
+
+            todoList.appendChild(li);
+            todoInput.value = '';
+        }
+
+        todoInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                addTodo();
+            }
+        });
+    </script>
+</body>
+</html>
+```
 
 ## OUTPUT
+![Screenshot 2025-04-06 191351](https://github.com/user-attachments/assets/dfe66478-944c-4953-a413-4d6a72a23339)
+
 
 
 ## RESULT
