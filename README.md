@@ -52,7 +52,7 @@ Upload to GitHub Pages for free hosting.
             text-align: center;
         }
         header, footer {
-            background-color: lightblue; /* Changed to light blue */
+            background-color: lightblue; 
             color: white;
             padding: 15px;
             font-size: 20px;
