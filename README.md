@@ -171,7 +171,9 @@ Upload to GitHub Pages for free hosting.
 ```
 
 ## OUTPUT
-![Screenshot 2025-04-06 191351](https://github.com/user-attachments/assets/dfe66478-944c-4953-a413-4d6a72a23339)
+
+![Screenshot 2025-04-07 150030](https://github.com/user-attachments/assets/1e15d08b-7d35-4478-b148-e3087f5dd4fb)
+
 
 
 
